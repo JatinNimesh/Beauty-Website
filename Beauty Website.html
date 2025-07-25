@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VelvetVow</title>
+    <link rel="shortcut icon" href="./Screenshot 2025-07-20 163040.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-evenly;
+            height: 100px;
+            background-color: hotpink;
+            align-items: center;
+        }
+        nav ul{
+            background-color: hotpink;
+            display: flex;
+            list-style: none;
+            height: 100%;
+            width: 90vw;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        nav ul a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .logo img{
+            border-radius: 60%;
+        }
+        .banner{
+            background-image: url('https://previews.123rf.com/images/scyther5/scyther52003/scyther5200300021/141415050-beauty-background-with-facial-cosmetic-products-with-empty-copy-space-makeup-skin-care-concept-with-.jpg');
+            background-size: 100% 100%;
+            height: 70vh;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .banner_heading{
+            color: white;
+            font-size: xx-large;
+        }
+        .banner_desc{
+            font-size: larger;
+            color: white;
+        }
+        .banner_section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            line-height: 3rem;
+        }
+        .shop_lux_btn{
+            background-color: hotpink;
+            border: none;
+            width: 200px;
+            height: 50px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            font-size: larger;
+        }
+
+        .product{
+            /* background-color: #f2eded; */
+            margin-top: 40px;
+            text-align: center;
+            display: grid;
+            gap: 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        }
+        .product_card{
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            font-size: larger;
+        }
+
+        .product_card img{
+            height: 200px;
+            width: 200px;
+            margin-top: 30px;
+        }
+
+        .product_card .add_luxury_btn{
+            margin-bottom: 10px;
+            background-color: hotpink;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        /* Responsive Website */
+        @media (max-width:600px){
+            header{
+                flex-direction: column;
+                gap: -20px;
+            }
+            nav ul{
+                flex-direction: column;
+                width: 100vw;
+                position: relative;
+                z-index: 2;
+                gap: 20px;
+            }
+            .banner{
+                margin-top: 200px;
+                z-index: -1;
+                position: relative;
+            }
+            .banner_desc{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./Screenshot 2025-07-20 163040.png" alt="" height="60px" width="70px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">All</a></li>
+                <li><a href="#">Fragnances</a></li>
+                <li><a href="#">Organic</a></li>
+                <li><a href="#">Bath & Body</a></li>
+                <li><a href="#">Skin Care</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">🛒</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--For Banner-->
+    <div class="banner">
+        <section class="banner_section">
+            <h1 class="banner_heading">Welcome to VelvetVow</h1>
+            <p class="banner_desc"><i>Where Beauty Meets Elegance, With Every Product a Promise of Soft, Luxurious Perfections..</i></p>
+            <a href="#products"><button class="shop_lux_btn">Shop Luxury</button></a>
+        </section>
+    </div>
+    <!--For Product Display-->
+    <div class="product" id="products">
+        <div class="product_card">
+            <img src="https://www.themancompany.com/cdn/shop/files/TMC_2_Salicylic_Primary_Image_6_61471d0b-1c41-4ed3-b4b8-0182b84a6bc0.jpg?v=1720693342" alt="">
+            <h3>Face Serum</h3>
+            <p>$25.99</p>
+            <button class="add_luxury_btn">Add Luxury</button>
+        </div>
+
+        <div class="product_card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3sGTExrdJjpdiw8b7OZHYr3_3AR_dITHL_Q&s" alt="">
+            <h3>Face Cream</h3>
+            <p>$20.99</p>
+            <button class="add_luxury_btn">Add Luxury</button>
+        </div>
+
+        <div class="product_card">
+            <img src="data:image/jpeg;base64,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" alt="">
+            <h3>Lips Stick</h3>
+            <p>$15.99</p>
+            <button class="add_luxury_btn">Add Luxury</button>
+        </div>
+
+        <div class="product_card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7zpXDXuZKd4_itvDfTGR1JaB_1hBt5D1b5A&s" alt="">
+            <h3>Face Wash</h3>
+            <p>$15.10</p>
+            <button class="add_luxury_btn">Add Luxury</button>
+        </div>
+
+        <div class="product_card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvm31_unP3y5OmNHxQxAgJXYP9zlH8WrwYpw&s" alt="">
+            <h3>Embrace Brisbane</h3>
+            <p>$05.99</p>
+            <button class="add_luxury_btn">Add Luxury</button>
+        </div>
+
+        <div class="product_card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-QuMnB8_oF74Yb3f7YrmvMR-xfGyR4w1pAw&s" alt="">
+            <h3>Perfume</h3>
+            <p>$38.99</p>
+            <button class="add_luxury_btn">Add Luxury</button>
+        </div>
+    </div>
+</body>
+</html>
